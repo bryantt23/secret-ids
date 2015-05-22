@@ -1,0 +1,7 @@
+<% @posts.each do |post| %>
+	<div class="post_wrapper">
+		<h2 class="name"><%= link_to post.name, post %></h2>
+  		<h3 class="secret"><%=  post.secret %></h3>
+		<p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p>
+	</div>
+<% end %>
