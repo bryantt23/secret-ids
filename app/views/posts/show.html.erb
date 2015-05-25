@@ -4,9 +4,9 @@
 
 
 <% if user_signed_in? %>
-<p class="secret">
+<h3 class="secret">
 	<%= @post.secret %>
-</p>
+</h3>
 
 <p class="author">
 	Posted by <%= @post.user.name %>
@@ -16,12 +16,16 @@
 	<%= link_to 'Sign In', new_user_session_path %> or
 	<%= link_to 'Sign Up', new_user_registration_path %> to see the Secret Identity
 </p>
+<p>
+	<%= link_to 'Index', root_path(@post) %>
+</p>
 <% end %>
 
 
 <% if @post.user == current_user %>
 
 <p>
+<%= link_to 'Index', root_path(@post) %> |
 <%= link_to 'Edit', edit_post_path(@post) %> |
 <%= link_to 'Delete', post_path(@post), method: :delete, data: { confirm: 'Are you sure?' } %>
 </p>
@@ -29,10 +33,6 @@
 <% end %>
 
 <% if user_signed_in? %>
-<%= link_to 'Add a secret', new_post_path %>
+<%= link_to 'Add Another Secret', new_post_path %> |
 <%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 <% end %>
-
-<p>
-	<%= link_to 'Index', root_path(@post) %>
-</p>
