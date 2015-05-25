@@ -2,6 +2,8 @@
 
 <% @posts.each do |post| %>
 <!-- <div class="post_wrapper"> -->
+	<%= image_tag post.avatar.url(:thumb) %>
+
 	<h3 class="name"><%= link_to post.name, post %> is...</h3>
 
 	<% if user_signed_in? %>
