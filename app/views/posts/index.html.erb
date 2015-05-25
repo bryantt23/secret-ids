@@ -1,12 +1,12 @@
 <% @posts.each do |post| %>
 <div class="post_wrapper">
-	<h2 class="name"><%= link_to post.name, post %> is....</h2>
+	<h2 class="name"><%= link_to post.name, post %> is...</h2>
 
 	<% if user_signed_in? %>
 	<h3 class="secret"><%=  post.secret %></h3>
 	<% else %>
-	<%= link_to 'Sign In', new_user_session_path %> or 
-	<%= link_to 'Sign Up', new_user_registration_path %>to see their Secret Identities
+	<%= link_to 'Sign In', new_user_session_path %> or
+	<%= link_to 'Sign Up', new_user_registration_path %> to see their Secret Identities
 	<% end %>
 
 	<!-- <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p> -->
@@ -15,4 +15,5 @@
 
 	<% if user_signed_in? %>
 	<%= link_to 'Add a secret', new_post_path %>
+	<%= link_to 'Sign Out', destroy_user_session_path, method: :delete %>
 	<% end %>

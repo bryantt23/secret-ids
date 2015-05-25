@@ -2,9 +2,14 @@
 	<%= @post.name %> is...
 </h1>
 
+	<% if user_signed_in? %>
 <p class="secret">
 	<%= @post.secret %>
 </p>
+	<% else %>
+	<%= link_to 'Sign In', new_user_session_path %> or
+	<%= link_to 'Sign Up', new_user_registration_path %> to see the Secret Identity
+	<% end %>
 
 <p class="date">
 	Submitted <%= time_ago_in_words(@post.created_at) %> Ago
