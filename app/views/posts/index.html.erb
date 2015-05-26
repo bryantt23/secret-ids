@@ -2,7 +2,12 @@
 
 <% @posts.each do |post| %>
 <!-- <div class="post_wrapper"> -->
-	<%= image_tag post.avatar.url(:thumb) %>
+	<!-- <%= image_tag post.avatar.url(:thumb) %> -->
+
+	<%= link_to post do %>
+	  <%= image_tag post.avatar.url(:thumb)  %>
+	<% end %>
+
 
 	<h3 class="name"><%= link_to post.name, post %> is...</h3>
 
