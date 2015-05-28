@@ -1,28 +1,19 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This website holds the Secret Identies of Many Superheroes.
 
-Things you may want to cover:
+But the identies are only revealed when you Sign Up and Sign In. 
 
-* Ruby version
+This Project Includes:
 
-* System dependencies
+* Authorization and Authentication using Devise
 
-* Configuration
+* Storage using Amazon S3
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Uploading of Images using Paperclip
 
 
-Please feel free to use a different markup language if you do not plan to run
+See it here...
+
+https://evening-dawn-6473.herokuapp.com/
 <tt>rake doc:app</tt>.
