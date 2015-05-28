@@ -16,4 +16,3 @@ This Project Includes:
 See it here...
 
 https://evening-dawn-6473.herokuapp.com/
-<tt>rake doc:app</tt>.
