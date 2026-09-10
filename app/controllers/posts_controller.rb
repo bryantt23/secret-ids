@@ -1,6 +1,6 @@
 class PostsController < ApplicationController
-  before_action :find_post, only: [:show, :edit, :update, :destroy]
-  # before_action :authenticate_user!, except: %i[index show]
+  before_action :find_post, only: %i[show edit update destroy]
+  before_action :authenticate_user!, except: %i[index show]
 
   def index
     @user = current_user
@@ -8,13 +8,11 @@ class PostsController < ApplicationController
   end
 
   def new
-    # @post = current_user.posts.build
-    @post = Post.new
+    @post = current_user.posts.build
   end
 
   def create
-    # @post = current_user.posts.build(post_params)
-    @post = Post.new(post_params)
+    @post = current_user.posts.build(post_params)
 
     if @post.save
       redirect_to @post
