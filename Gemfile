@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 7.2.0'
+gem 'rails', '~> 8.0.0'
 gem 'json', '< 3'
 # Use SCSS for stylesheets
 gem 'sass-rails', '>=6'
@@ -26,7 +26,7 @@ gem 'jbuilder', '~> 2.0'
 
 group :development, :test do
   # Use sqlite3 as the database for Active Record
-  gem 'sqlite3', '~> 1.4'
+  gem 'sqlite3', '>= 2.1'
 
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 3.7'
