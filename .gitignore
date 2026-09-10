@@ -16,3 +16,5 @@
 !/log/.keep
 /tmp
 /storage/
+/db/*.sqlite3-shm
+/db/*.sqlite3-wal
