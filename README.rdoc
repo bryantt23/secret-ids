@@ -8,9 +8,9 @@ This Project Includes:
 
 * Authorization and Authentication using Devise
 
-* Storage using Amazon S3
+* Local storage using Active Storage
 
-* Uploading of Images using Paperclip
+* Uploading of images using Active Storage
 
 
 See it here...
