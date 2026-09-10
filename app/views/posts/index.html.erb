@@ -1,11 +1,10 @@
 <h1> Secret Identities </h2>
 
 <% @posts.each do |post| %>
-<!-- <div class="post_wrapper"> -->
-	<!-- <%= image_tag post.avatar.url(:thumb) %> -->
-
 	<%= link_to post do %>
-	  <%= image_tag post.avatar.url(:thumb)  %>
+		<% if post.avatar.attached? %>
+		  <%= image_tag post.avatar, width: 100, height: 100 %>
+		<% end %>
 	<% end %>
 
 
@@ -14,9 +13,6 @@
 	<% if user_signed_in? %>
 	<h4 class="secret"><%=  post.secret %></h4>
 	<% end %>
-
-	<!-- <p class="date"><%= post.created_at.strftime("%B %d, %Y") %></p> -->
-<!-- </div> -->
 <% end %>
 
 <br>

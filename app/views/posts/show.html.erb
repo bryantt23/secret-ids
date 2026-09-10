@@ -2,7 +2,9 @@
 	<%= @post.name %> is...
 </h1>
 
-<%= image_tag @post.avatar.url(:medium) %>
+<% if @post.avatar.attached? %>
+	<%= image_tag @post.avatar, width: 250, height: 250 %>
+<% end %>
 
 <% if user_signed_in? %>
 <h3 class="secret">
